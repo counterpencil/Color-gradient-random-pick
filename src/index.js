@@ -1,3 +1,5 @@
+const body= document.querySelector("body");
+
 const colors = [
   "#ef5777",
   "#575fcf",
@@ -18,3 +20,14 @@ const colors = [
   "#ffd32a",
   "#ff3f34"
 ];
+function changeBgColor(){
+
+  const bgColor1 = colors[Math.floor(Math.random()*colors.length)];
+  const bgColor2 = colors[Math.floor(Math.random()*colors.length)];
+  
+  body.style.background =`linear-gradient(0.25turn, ${bgColor1},${bgColor2})`;
+  
+}
+const button = document.querySelector("button");
+
+button.addEventListener("click",changeBgColor )
